@@ -27,9 +27,9 @@ class TestBubbleSort(unittest.TestCase):
         self.assertEqual(bubble_sort([8, 7, 6, 5, 4, 3, 2, 1]), [1, 2, 3, 4, 5, 6, 7, 8])
 
     def testnegativeCases(self):
-        self.assertRaises(TypeError, lambda: bubble_sort("hello world"), msg=None)
-        self.assertRaises(TypeError, lambda: bubble_sort("12345"), msg=None)
-        self.assertRaises(TypeError, lambda: bubble_sort(['a','b','c','d']), msg=None)
+        self.assertRaises(TypeError, lambda: bubble_sort, "hello world")
+        self.assertRaises(TypeError, lambda: bubble_sort, "12345")
+        self.assertRaises(TypeError, lambda: bubble_sort, ['a','b','c','d'])
     
     def testperformanceCases(self):
         threshold = 1 # threshold for operating should be 1 sec for these tests
